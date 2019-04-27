@@ -39,7 +39,7 @@ class MainController {
 
                 // Sem usar o runLater, dá erro de Thread-* não pode manipular componentes do JavaFX
                 Platform.runLater {
-                    lblStatusValue.text = "Botão acionado"
+                    lblStatusValue.text = "Botão 2 acionado"
                 }
             }
         }
