@@ -6,6 +6,7 @@ import javafx.fxml.FXML
 import javafx.scene.control.Label
 import java.net.URL
 import java.util.*
+import kotlin.concurrent.thread
 
 class MainController {
 
@@ -26,9 +27,23 @@ class MainController {
         Platform.runLater {
             println("[${Thread.currentThread().name}]  Botão acionado dentro do runLater")
             lblStatusValue.text = "Botão acionado"
-            lblStatusValue.style = "-fx-background-color: green;"
         }
         println("[${Thread.currentThread().name}]  Botão acionado fora do runLater")
+    }
+
+    @FXML
+    fun onBtn2Action(event: ActionEvent) {
+        Platform.runLater {
+            thread {
+                println("[${Thread.currentThread().name}]  Botão 2 acionado dentro do runLater")
+
+                // Sem usar o runLater, dá erro de Thread-* não pode manipular componentes do JavaFX
+                Platform.runLater {
+                    lblStatusValue.text = "Botão acionado"
+                }
+            }
+        }
+        println("[${Thread.currentThread().name}]  Botão 2 acionado fora do runLater")
     }
 
 }

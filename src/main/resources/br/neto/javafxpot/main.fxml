@@ -50,11 +50,12 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" >
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button layoutX="289.0" layoutY="234.0" mnemonicParsing="false" onAction="#onBtnAction" text="Button" />
             <Label fx:id="lblStatusLabel" layoutX="158.0" layoutY="208.0" text="Status do aplicativo:" />
             <Label fx:id="lblStatusValue" disable="true" layoutX="292.0" layoutY="208.0" prefHeight="16.0" prefWidth="225.0" text="Nada aconteceu ainda..." />
+            <Button layoutX="289.0" layoutY="234.0" mnemonicParsing="false" onAction="#onBtnAction" text="Button" />
+            <Button layoutX="392.0" layoutY="234.0" mnemonicParsing="false" onAction="#onBtn2Action" text="Button-2" />
       </children>
     </AnchorPane>
   </children>
