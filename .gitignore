@@ -52,3 +52,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+.gitignore
+.gradle/4.10.3/vcsMetadata-1/
+.gradle/5.4/vcsMetadata-1/
+build/kotlin/sessions/
